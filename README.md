@@ -1,1 +1,2 @@
-# Weather-App
+# Weather-App 
+Group project for Web Programming class. A simple weather application was created that allows users to input a location (city or zip code) and retrieve weather data. The app displays details like temperature, humidity, and wind speed, and it provides dynamic updates to show the current weather conditions. This project incorporates HTML for the structure, CSS for styling, and JavaScript for functionality, including fetching weather data from an API. 
