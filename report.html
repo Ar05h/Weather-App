@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Report Weather Issue</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="top-navbar">
+    <div class="left-label">Report an Issue</div>
+  </header>
+
+  <div class="container">
+    <div class="weather-section">
+      <h2>Report an Issue</h2>
+      <form id="reportForm">
+        <label for="issueInput">Describe the issue (e.g., wrong temperature):</label>
+        <textarea id="issueInput" rows="4" placeholder="What went wrong?"></textarea>
+        <button type="submit">Report Issue</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Handle the form submission
+    document.getElementById("reportForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent page reload on form submit
+      const issue = document.getElementById("issueInput").value;
+
+      if (issue.trim()) {
+        // Display thank you message (alert)
+        alert("Thank you for reporting the issue!");
+
+        // Clear the issue form
+        document.getElementById("issueInput").value = "";
+      } else {
+        // If issue input is empty, ask the user to provide a description
+        alert("Please describe the issue before submitting.");
+      }
+    });
+  </script>
+</body>
+</html>

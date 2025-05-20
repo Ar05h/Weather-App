@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Feedback</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="top-navbar">
+    <div class="left-label">Weather Feedback</div>
+  </header>
+
+  <div class="container">
+    <div class="weather-section">
+      <h2>Weather Feedback</h2>
+      <div id="locationDisplay"></div>  <!-- Display the last searched location -->
+      <form onsubmit="submitFeedback(event)">
+        <label for="feedbackInput">How accurate was the weather in your area?</label>
+        <textarea id="feedbackInput" rows="4" placeholder="Share your experience..."></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Display last searched location
+    window.onload = function() {
+      const location = localStorage.getItem("lastLocation");
+      const locationDisplay = document.getElementById("locationDisplay");
+
+      if (location) {
+        locationDisplay.innerHTML = `<p>Last searched location: ${location}</p>`;
+      }
+    };
+
+    // Feedback submission handler with alert
+    function submitFeedback(event) {
+      event.preventDefault(); // Prevent page reload on form submit
+      const feedback = document.getElementById('feedbackInput').value;
+      if (feedback.trim()) {
+        alert("Thank you for your feedback!");
+        document.getElementById('feedbackInput').value = ''; // Clear the input field
+      } else {
+        alert("Please provide feedback before submitting.");
+      }
+    }
+  </script>
+</body>
+</html>

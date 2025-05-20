@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Top Navbar -->
+  <header class="top-navbar">
+    <div class="left-label">Find Your Local Weather</div>
+    <div class="center-search">
+      <input id="locationInput" type="text" placeholder="Search City or Zip Code"/>
+      <button onclick="getWeather()">🔍</button>
+    </div>
+    <div class="right-icons">
+      <span class="icon">🌐</span>
+      <span class="menu">☰</span>
+    </div>
+  </header>
+
+  <!-- Bottom Navbar -->
+  <nav class="bottom-navbar">
+    <a href="feedback.html">Weather Feedback</a>
+    <a href="report.html">Report an Issue</a>
+    <a href="pollen-info.html">How Can Pollen Affect You</a>
+  </nav>
+
+  <!-- Weather Output -->
+  <div class="container">
+    <div id="weatherOutput" class="weather-section"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

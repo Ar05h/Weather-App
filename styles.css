@@ -1,0 +1,159 @@
+/* Basic styling and layout */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.top-navbar {
+  background-color: #1e2a38;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.left-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.center-search {
+  display: flex;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+.center-search input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.center-search button {
+  padding: 8px 12px;
+  background-color: #0077cc;
+  border: none;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-icons .icon,
+.right-icons .menu {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.bottom-navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  gap: 15px;
+}
+
+.bottom-navbar a {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.bottom-navbar a:hover {
+  background-color: #e6eff7;
+  border-color: #0077cc;
+  color: #0077cc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.weather-section {
+  width: 100%;
+  max-width: 700px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+.weather-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.weather-box {
+  background-color: #e6eff7;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.weather-box.wide {
+  grid-column: span 2;
+  background-color: #d0e4f2;
+}
+
+.weather-box.main-temp {
+  grid-column: span 2;
+  background-color: #2a8cd8;
+  color: white;
+}
+
+.weather-box .temp {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.weather-box .description {
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-top: 4px;
+}
+
+.weather-box .time {
+  font-size: 14px;
+  color: #444;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+table th {
+  background
